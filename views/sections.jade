@@ -1,0 +1,12 @@
+document
+  stackTemplate
+    banner
+      title Sections
+    collectionList
+      shelf
+        section
+          each section in sections
+            lockup(data-id=section.key)
+              - var imgUrl = rootUrl + section.thumb + '?X-Plex-Token=' + token
+              img(src=imgUrl width="256" height="256")
+              title= section.title

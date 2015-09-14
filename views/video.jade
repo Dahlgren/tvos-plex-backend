@@ -1,0 +1,29 @@
+- var imgUrl = rootUrl + video.thumb + '?X-Plex-Token=' + token
+
+document
+   productTemplate
+      background
+      banner
+        infoList
+          info
+            header
+              title Director
+            text John Appleseed
+          info
+            header
+              title Actors
+            text Anne Johnson
+            text Tom Clark
+            text Maria Ruiz
+        stack
+          title= video.title
+          row
+            text 1hr 54min
+            text Comedy
+            text 2015
+          description(allowsZooming="true" moreLabel="more")= video.summary
+          text Language information can go here
+          row
+            buttonLockup
+              title Play
+        heroImg(src=imgUrl)

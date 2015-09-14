@@ -1,0 +1,15 @@
+document
+  listTemplate
+    list
+      header
+        title Series
+      section
+        each item in items
+          listItemLockup(data-id=item.ratingKey)
+            - var imgUrl = rootUrl + item.thumb + '?X-Plex-Token=' + token
+            title= item.title
+            relatedContent
+              lockup
+                img(src=imgUrl)
+                title= item.title
+                description= item.summary
