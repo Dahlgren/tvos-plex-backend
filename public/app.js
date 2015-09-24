@@ -63,7 +63,19 @@ function showVideoSection(id) {
 
 function showVideo(id) {
   getDocument('/videos/' + id, function (doc) {
+    bindListItemSelection(doc, "buttonLockup", function (e) {
+      var videoURL = e.target.getAttribute('data-video-url');
 
+      if(videoURL) {
+        var player = new Player();
+        var playlist = new Playlist();
+        var mediaItem = new MediaItem("video", videoURL);
+
+        player.playlist = playlist;
+        player.playlist.push(mediaItem);
+        player.present();
+      }
+    });
   });
 }
 
