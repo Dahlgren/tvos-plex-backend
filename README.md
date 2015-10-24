@@ -1,4 +1,4 @@
-# Plex for tvOS Backend
+# tvOS Plex Backend
 Node.js backend for tvOS Plex App
 
 ## Requirements
